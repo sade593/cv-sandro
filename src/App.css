@@ -1,72 +1,137 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #4a90e2;
+  --sidebar-bg: #f1f3f5;
+  --card-bg: #ffffff;
+  --muted: #7a7a7a;
 }
 
-.app-container {
+body.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --accent: #4a90e2;
+  --sidebar-bg: #1e1e1e;
+  --card-bg: #1c1c1c;
+  --muted: #cccccc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar {
-  width: 260px;
-  background-color: #1a1a1a;
-  color: white;
-  padding: 2rem 1.5rem;
+  width: 320px;
+  background-color: var(--sidebar-bg);
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
 }
 
 .profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
+  margin-bottom: 20px;
 }
 
 .name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0.5rem 0 0;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
   text-align: center;
 }
 
 .role {
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 16px;
+  color: var(--accent);
+  margin: 8px 0 30px;
   text-align: center;
-  margin-bottom: 2rem;
+  font-weight: 500;
 }
 
-.sidebar-section {
+.section {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
-.sidebar-section h2 {
-  font-size: 0.8rem;
+.section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  color: #888;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.25rem;
+  letter-spacing: 1px;
+  color: var(--muted);
 }
 
-.sidebar-section p,
-.sidebar-section li {
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
+.section p,
+.section li {
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
-.sidebar-section ul {
-  list-style: none;
-  padding-left: 0;
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 .main-content {
   flex: 1;
-  padding: 2rem;
+  padding: 60px 60px;
+  background-color: var(--bg);
+  transition: background-color 0.3s ease;
+}
+
+.main-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.main-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 700px;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6495ED;
+  background-color: #f0f0f0;
 }
