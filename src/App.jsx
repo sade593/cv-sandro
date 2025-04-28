@@ -60,7 +60,7 @@ function App() {
             <h3>Bachelor of Information Technology</h3>
             <p><strong>Business and Technology University, Tbilisi</strong> | 2024 – Present</p>
             <p>
-              First-year student majoring in Information Technology. Developing a strong foundation in computer science, programming, and web development.
+              First year student majoring in Information Technology. Developing a strong foundation in computer science, programming, and web development.
             </p>
           </div>
         </section>
